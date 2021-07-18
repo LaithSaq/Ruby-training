@@ -1,5 +1,6 @@
 def caesar_cipher(string,shift)
   string_array = string.split("")
+  shift = shift%26
   string_array.map! do |char|
     case char
     when ('a'..'z')
