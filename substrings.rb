@@ -1,7 +1,7 @@
 def substrings(string, dictionary)
     string.downcase!
     dictionary.reduce(Hash.new) do |ret,word|
-        ret[word]=string.scan(word).size unless string.scan(word).size==0 
+        ret[word.to_sym]=string.scan(word).size unless string.scan(word).size==0 
         ret
     end
 end
